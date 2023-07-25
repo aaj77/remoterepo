@@ -4,7 +4,7 @@ pipeline {
         stage('git repo & clean') {
             steps {
                bat "rmdir  /s /q automation_scripts"
-                bat "git clone https://stash.intranet.qualys.com/scm/~aljadhav/automation_scripts.git"
+                bat "git clone https://github.com/aaj77/remoterepo.git"
                 bat "mvn clean -f automation_scripts"
             }
         }
