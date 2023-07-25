@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-               bat "rmdir  /s /q automation_scripts"
+               bat "rmdir  /s /q remoterepo"
                 bat "git clone https://github.com/aaj77/remoterepo.git"
-                bat "mvn clean -f automation_scripts"
+                bat "mvn clean -f remoterepo"
             }
         }
         stage('install') {
