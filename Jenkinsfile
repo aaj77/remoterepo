@@ -6,6 +6,7 @@ pipeline {
                bat "rmdir  /s /q remoterepo"
                 bat "git clone https://github.com/aaj77/remoterepo.git"
                 bat "mvn clean -f remoterepo"
+                bat "echo 00_install-%date%_%time% >> jb/file1.txt"
             }
         }
         stage('install') {
